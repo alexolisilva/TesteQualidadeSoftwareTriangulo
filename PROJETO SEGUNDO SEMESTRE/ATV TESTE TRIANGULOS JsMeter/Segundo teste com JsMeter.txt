@@ -1,0 +1,21 @@
+
+Detalhes, utilizando as funções Math.ABS:
+
+Quantidades de requisições na função: 10 000
+
+RAM        :  6 MB
+HeapTotal  :  10 MB
+HeapUsed   :  4 MB
+External   :  408 Bytes
+CPU        :  1985 ms
+Spend time :  4707 ms
+
+
+Quantidades de requisições na função:  100 000
+
+RAM        :  44 MB
+HeapTotal  :  49 MB
+HeapUsed   :  23 MB
+External   :  408 Bytes
+CPU        :  19891 ms
+Spend time :  53023 ms

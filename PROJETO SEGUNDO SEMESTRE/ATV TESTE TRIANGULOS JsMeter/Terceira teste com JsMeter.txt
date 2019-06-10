@@ -1,0 +1,45 @@
+
+
+Detalhes, utilizando as funções Math.POW e Math.SQRT:
+
+Quantidades de requisições na função: 10 000
+
+RAM        :  4 MB
+HeapTotal  :  7 MB
+HeapUsed   :  2 MB
+External   :  408 Bytes
+CPU        :  1220 ms
+Spend time :  2551 ms
+
+
+Quantidades de requisições na função:  100 000
+
+RAM        :  44 MB
+HeapTotal  :  49 MB
+HeapUsed   :  22 MB
+External   :  408 Bytes
+CPU        :  7577 ms
+Spend time :  20691 ms
+
+
+
+Detalhes, utilizando as funções Math.ABS:
+
+Quantidades de requisições na função: 10 000
+
+RAM        :  6 MB
+HeapTotal  :  10 MB
+HeapUsed   :  4 MB
+External   :  408 Bytes
+CPU        :  1985 ms
+Spend time :  4707 ms
+
+
+Quantidades de requisições na função:  100 000
+
+RAM        :  44 MB
+HeapTotal  :  49 MB
+HeapUsed   :  23 MB
+External   :  408 Bytes
+CPU        :  19891 ms
+Spend time :  53023 ms

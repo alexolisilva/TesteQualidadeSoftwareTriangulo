@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+  
+    <script src="plotly-latest.min.js"></script>         
+
+    <style>
+        .container {
+            margin: 0 auto;
+            width: 50%;
+        }          
+    </style>
+    
+</head>
+<body>
+    
+    <div class="container">    
+       
+    <div id="grafico" style="width:600px;height:250px;"></div>
+    
+    <script>                                     
+
+        var trace1 = {
+            x: [5, 10, 20, 25, 50, 100],
+            y: [1103, 2125, 4170, 5097, 9958, 19873],
+            type: 'scatter',
+            name:'I5 Win'
+        };
+        
+        var trace2 = {
+            x: [5, 10, 20, 25, 50, 100],
+            y: [542, 1008, 1474, 1738, 3208, 5749],
+            type: 'scatter',
+            name:'I5 Lin' 
+        };
+
+        var trace3 = {
+            x: [5, 10, 20, 25, 50, 100],
+            y: [726, 1045, 1612, 1929, 3633, 6718],
+            type: 'scatter',
+            name:'RPI Lin' 
+        };                
+
+        var data = [trace1, trace2, trace3];
+
+        var layout = {
+            title: 'Utilizando as funções Math.POW e Math.SQRT:',
+            xaxis: {
+                title: 'MIL Execuções',
+                showgrid: false,
+                zeroline: false
+            },
+            yaxis: {
+                title: 'MILI Segundos',
+                showline: false
+            }
+        };
+
+        Plotly.newPlot('grafico', data, layout);
+
+    </script>
+
+    </div>
+
+</body>
+</html>

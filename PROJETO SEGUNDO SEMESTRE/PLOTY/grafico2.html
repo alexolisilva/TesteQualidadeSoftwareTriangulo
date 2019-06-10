@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+  
+    <script src="plotly-latest.min.js"></script>         
+
+    <style>
+        .container {
+            margin: 0 auto;
+            width: 50%;
+        }
+
+        #titulo {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size:larger;            
+        }    
+    </style>
+    
+</head>
+<body>
+    
+    <div class="container">
+
+    <h1 id="titulo"><center>Utilizando funções Math.POW e Math.SQRT:</center></h1>
+       
+    <div id="tester" style="width:600px;height:250px;"></div>
+    
+    <script>                     
+    
+        var trace1 = {
+            x: [1, 2, 3, 4],
+            y: [10, 15, 13, 17],
+            type: 'scatter'
+        };
+
+        var trace2 = {
+            x: [1, 2, 3, 4],
+            y: [16, 5, 11, 9],
+            type: 'scatter'
+        };
+
+        var data = [trace1, trace2];
+
+        var layout = {
+            title: 'Quarter 1 Growth',
+            xaxis: {
+                title: 'GDP per Capita',
+                showgrid: false,
+                zeroline: false
+            },
+            yaxis: {
+                title: 'Percent',
+                showline: false
+            }
+        };
+
+        Plotly.newPlot('tester', data, layout);
+
+    </script>
+
+    </div>
+
+</body>
+</html>

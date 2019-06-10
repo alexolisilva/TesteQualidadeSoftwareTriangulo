@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+  
+    <script src="plotly-latest.min.js"></script>         
+
+    <style>
+        .container {
+            margin: 0 auto;
+            width: 50%;
+        }
+
+        #titulo {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size:larger;            
+        }    
+    </style>
+    
+</head>
+<body>
+    
+    <div class="container">
+
+    <h1 id="titulo"><center>Utilizando funções Math.POW e Math.SQRT:</center></h1>
+       
+    <div id="tester" style="width:600px;height:250px;"></div>
+    
+    <script>                     
+
+        TESTER = document.getElementById('tester');        
+
+        Plotly.plot( TESTER, [{
+        x: [5, 10, 20, 25, 50, 100],        
+        y: [1103, 2125, 4170, 5097, 9958, 19873],
+        name:'I5 Win'}], {
+        margin: { t: 0 }});
+        Plotly.plot( TESTER, [{
+        x: [5, 10, 20, 25, 50, 100],
+        y: [542, 1008, 1474, 1738, 3208, 5749],
+        name:'I5 Lin' }], {
+        margin: { t: 0 } } );
+        Plotly.plot( TESTER, [{
+        x: [5, 10, 20, 25, 50, 100],
+        y: [726, 1045, 1612, 1929, 3633, 6718],
+        name:'RPI Lin' }], {
+        margin: { t: 0 } } );
+
+        
+    </script>
+
+    </div>
+
+</body>
+</html>

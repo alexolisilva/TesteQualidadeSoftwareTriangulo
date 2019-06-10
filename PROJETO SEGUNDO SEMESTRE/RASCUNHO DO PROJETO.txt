@@ -1,0 +1,66 @@
+
+Tema:
+	O projeto consiste em criar um cenário que possa exemplificar alguma situação relevante para a temática de Teste e Qualidade de Software.
+
+
+Estratégia:
+	Foi decidido que através do uso e análise de duas funções, cujo, entradas e saídas esperadas sejam iguais, mas com as mesmas tendo implementações distintas.
+
+
+Objetivos:
+	Observar através da ferramenta JsMeter a variação no consumo de Hardware mediante ao uso de diferentes softwares(no caso a função isolada que estará sendo testada).
+	Dessa forma, buscar tornar mais palpavel a máxima estudada durante o curso de SI, a indicão de que a refatoração de um código pode melhorar o desempenho da aplicação e/ou spftware o qual está contido.
+
+
+Metodologia:
+	Utilizando um código simples visto em sala de aula, onde o mesmo destingue se uma determinada entrada de 3 valores podem ou não formar um triângulo.
+	Através da implementação de dois códigos distintos e submetendo eles a um mesmo "teste de carga", observar o impacto no hardware, das alterações existentes entre eles.
+	No caso utilizado, uma das funções implementadas utilizam 2 funções matemática (Pow(); e Sqrt();)  para encontrar o módulo de um número e a outra função utiliza apenas uma função matemática (MAth.abs();). Executando o teste implementado com o módulo JsMeter, podemos observar as variações abaixo:
+
+
+Detalhes, utilizando as funções Math.POW e Math.SQRT:
+
+Quantidades de requisições na função: 10 000
+
+RAM        :  4 MB
+HeapTotal  :  7 MB
+HeapUsed   :  2 MB
+External   :  408 Bytes
+CPU        :  1220 ms
+Spend time :  2551 ms
+
+
+Quantidades de requisições na função:  100 000
+
+RAM        :  44 MB
+HeapTotal  :  49 MB
+HeapUsed   :  22 MB
+External   :  408 Bytes
+CPU        :  7577 ms
+Spend time :  20691 ms
+
+
+
+Detalhes, utilizando as funções Math.ABS:
+
+Quantidades de requisições na função: 10 000
+
+RAM        :  6 MB
+HeapTotal  :  10 MB
+HeapUsed   :  4 MB
+External   :  408 Bytes
+CPU        :  1985 ms
+Spend time :  4707 ms
+
+
+Quantidades de requisições na função:  100 000
+
+RAM        :  44 MB
+HeapTotal  :  49 MB
+HeapUsed   :  23 MB
+External   :  408 Bytes
+CPU        :  19891 ms
+Spend time :  53023 ms
+
+
+	Fato interessante já observado, é que apesar de utilizar uma implementação com menos funções matemáticas, o segundo caso observado consumiu um maior tempo de processamento para efetuar os testes.
